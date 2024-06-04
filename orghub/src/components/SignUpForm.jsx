@@ -1,8 +1,15 @@
 import React from 'react'
-// import { Button } from './Button'
+import { useNavigate } from 'react-router-dom'
+import { Button } from './Button'
 import { InputLabel } from './InputLabel'
 
 export const SignUpForm = () => {
+    const navigate = useNavigate();
+    function handleSubmitButton (e) {
+        e.preventDefault();
+        navigate("/login");
+        // need to add state and fetch to backend using useState and useEffect(fetch request)
+    }
   return (
     <div>
         <form>
@@ -30,7 +37,7 @@ export const SignUpForm = () => {
                 <InputLabel labelName = {"Confirm Password"}  />
                 <input required type="password" placeholder="Confirm Password" />
             </div>
-            {/* <Button btnName={"Submit"}/> */}
+            <Button btnName={"Submit"} onClick={handleSubmitButton}/>
         </form>
     </div>
   )
