@@ -11,11 +11,14 @@ export const LoginForm = () => {
   function handleLoginButton (e) {
     e.preventDefault();
     navigate("/");
+    // need to add state and fetch to backend using useState and useEffect(fetch request)
+    // need to change navigation route to ("/home/:id" replace = true) when backend is up and running
   }
   
   function handleSignUpButton (e) {
     e.preventDefault();
     navigate("/signup");
+    // need to add state and fetch to backend using useState and useEffect(fetch request)
   }
     
   return (
